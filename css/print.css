@@ -1,0 +1,41 @@
+#printable_area
+{
+	width:785px;
+	margin: 50px auto;
+}
+
+#body_content
+{
+
+}
+
+#body_content h3
+{
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+#notification
+{
+	border: 1px solid #999999;
+	background-color: #CCCCCC;
+	height: 50px;
+	padding:10px;
+}
+
+#body_content p
+{
+	color: #000000;
+	text-align: left;
+	font-size: 1.3em;
+	line-height: 1.5em;
+
+}
+
+#footer
+{
+	border-top: 1px dashed #4c4c4c;
+	font-family: sans-serif, tahoma;
+	font-size: 1.0em;
+}

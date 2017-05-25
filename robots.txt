@@ -1,0 +1,24 @@
+User-Agent: *
+Allow: /
+Disallow: /?func=main
+Disallow: /?func=settings
+Disallow: /?func=logout
+Disallow: /?func=entries
+Disallow: /?func=new_entry
+Disallow: /?func=empty_trash
+Disallow: /?func=main
+Disallow: /?func=trash_untitled
+Disallow: /?func=delete_account
+Disallow: /un_supported.html
+Disallow: /images/
+Disallow: /files/
+Disallow: /css/
+Disallow: /models/
+Disallow: /templates/
+Disallow: /views/
+Disallow: /js/
+Disallow: /templates/
+Disallow: /views/snips/
+
+Sitemap: http://www.pageonetwentysix.com/sitemap.txt
+          

@@ -1,0 +1,28 @@
+#AuthUserFile /home/pasteboard/www/sites/_pageonetwentysix/.htpasswd
+#AuthName "Restricted Area"
+#AuthType Basic
+#Require valid-user
+
+#SSLOptions +StrictRequire
+#SSLRequireSSL
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
+
+#RewriteCond %{HTTP_HOST} !^www.pageonetwentysix.com$
+#RewriteRule ^(.*)$ http%{SERVER_NAME}%{REQUEST_URI}  [R=301]
+
+#RewriteCond %{HTTPS} =on [NC]
+#RewriteRule ^(.*)$ http://pageonetwentysix.com/$1 [L]
+
+#RewriteCond %{HTTPS} !=on [NC]
+#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+<IfModule mod_headers.c>
+	<FilesMatch "^\?func=(main|settings|logout|entries|new_entry|empty_trash|trash_untitled|delete_account)$">
+	Header set x-robots-tag "noindex, nofollow, noarchive"
+	</FilesMatch>
+</IfModule>

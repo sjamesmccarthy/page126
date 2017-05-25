@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package>
+	<name>journal</name>
+	<url>http://www.pageonetwentysix.com/</url>
+	<description>Simple webapp for on the go writing</description>
+	<version>1.0</version>
+	<version_updated>2010-04-01 12:36:00</version_updated>
+	<author>James McCarthy</author>
+	<author_url>http://www.sjamesmccarthy.com</author_url>
+	<author_email>james.mccarthy@gmail.com</author_email>
+	<license>GPL</license>
+	<install_roles>user,admin</install_roles>
+	<install_sql>journal.sql</install_sql>
+</package>
+

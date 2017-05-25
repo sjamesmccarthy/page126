@@ -1,0 +1,24 @@
+.tipsy 
+{ 
+padding: 5px;
+/* margin-top: -14px; */
+font-size: 1.3em; 
+opacity: 0.8; filter: alpha(opacity=80); 
+background-repeat: no-repeat;  
+background-image: url(../images/tipsy_white.gif);
+}
+
+.tipsy-inner 
+{ 
+padding: 5px 8px 4px 8px; 
+background-color: white; 
+color: black; 
+max-width: 400px; 
+text-align: center; 
+}
+
+/* .tipsy-inner { -moz-border-radius:3px; -webkit-border-radius:3px; } */
+.tipsy-north { background-position: top center; }
+.tipsy-south { background-position: bottom center; margin-top: -14px; }
+.tipsy-east { background-position: right center; }
+.tipsy-west { background-position: left center; }

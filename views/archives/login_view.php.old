@@ -1,0 +1,67 @@
+		<? if($_SESSION['hint_sent'] == 1) { ?>
+		<div id="error_box">
+		<h3>notice</h3>
+		<p>Your hint has been emailed to you at <?= $_SESSION['login_email']; ?></p>
+		</div>
+		<? } else if($_SESSION['resendcode'] == 1) 
+		{ ?>
+		<div id="error_box">
+		<h3>notice</h3>
+		<p>Your activation code has been emailed to you at <?= $_SESSION['login_email']; ?></p>
+		</div>
+		<? } else if($_SESSION['sudo_delete']  == 'failed') {
+		?>
+		<div id="error_box">
+		<h3>failed</h3>
+		<p>Your delete request has failed. Please check your email and try again.</p>
+		</div>
+		<? } unset($_SESSION['sudo_delete']); ?>
+		<!-- resetpswd_confirm -->
+		
+		<h3>write</h3>
+		
+		<div id="login_area">
+		<form id="login_form" action="index.php?func=auth" method="POST" />
+		
+			<div id="username_col">
+			<p>Username<br />
+			<input type="text" name="login_email" size="27" />
+			</p>
+			</div>
+			
+			<div id="password_col">
+			<p>Password<br />
+			<input type="password" name="login_password" size="27" />
+			<p>
+			</div>
+			
+			<div id="submit_col">
+			<p>
+			<input type="submit" value="turn the page!" />
+			</p>
+			</div>
+		
+		</form>
+		<div id="clear"></div>
+		<p class="smallest">If you don't have an account yet, just enter your email as your username and a password<br />to take the next step along your journey.</p>
+		
+		</div><!-- /login_area -->
+		
+		<div id="intro">
+		<p class="big">It's no mistake that you found pageonetwentysix, a simple, private and secure journal where you can tuck away todays memories for safe keeping later. In the book of life, this is your page - write it.</p> 
+		
+		<h4><a href="?func=create">Sign-Up!</a> it's free and uncomplicated</h4>
+		<p class="medium">Everyone gets the same promise of privacy and simplicity and when the time is right, you can <a href="?func=upgrade">upgrade</a> to a <a href="?func=upgrade">more complicated version</a> with a few more extra features that you won't be able to live without.
+		</p>
+		
+		<div id="secure_area">
+		<p>Free or upgraded, your journal is always encrypted using the AES-256 bit encryption to ensure that what you write about is kept private and secure. <a href="?func=privacy">Huh?</a>
+		</p> 
+		</div><!-- /secure_area -->
+		
+		</div><!-- /intro -->
+		
+		<? 
+		//unset($_SESSION['hint_sent']); unset($_SESSION['resendcode']);  
+		session_destroy();
+		?>
