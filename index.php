@@ -3,6 +3,7 @@
 // (c) 2010 James McCarthy
 // james.mccarthy@gmail.com
 // http://www.pasteboard.org
+// updated 5/25/2017
 
 // This app is being written to be ported to the pasteboard project
 // which is why some of the code structure may seem strange, like this index file.
