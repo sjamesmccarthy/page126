@@ -1,6 +1,9 @@
 <?
 
-error_reporting(0);
+/* NOTE: THIS SITE REQUIRES PHP 5.x or lower */
+/* Uses GLOBALS */
+
+error_reporting(E_ALL);
 
 /* Startup */
 define('APP-START','TRUE');
@@ -25,6 +28,7 @@ require_once('models/journal_model.php');
 
 /* Database connection information */
 $host = explode('.', $_SERVER['HTTP_HOST']);
+$host_db_prefix = "jmgaller_";
 
 switch ($host[0])
 {
@@ -38,18 +42,10 @@ switch ($host[0])
 
 	default:
 	/* Site Database Information */
-	define('DB_NAME', 'page126');
+	define('DB_NAME', $host_db_prefix . 'page126');
 	define('DB_HOST', 'localhost');
-	define('DB_USER', 'jamesmcc');
-	define('DB_PSWD', 'jewel4me');
-
-	/*
-	if ($_SERVER['HTTPS'] != "on") {
-    $url = "https://". $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-    header("Location: $url");
-    exit;
-	}
-	*/
+	define('DB_USER', $host_db_prefix . 'web');
+	define('DB_PSWD', 'dontbelik');
 
 	break;
 }

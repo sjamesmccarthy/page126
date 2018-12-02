@@ -655,7 +655,7 @@ function _redirect($var,$type=302)
 function _dbopen()
 {
 	global $data;
-	$data['CON'] = mysql_pconnect(DB_HOST, DB_USER, DB_PSWD);
+	$data['CON'] = mysqli_pconnect(DB_HOST, DB_USER, DB_PSWD);
 	$DBH = mysql_select_db(DB_NAME, $data['CON']);
 }
 
